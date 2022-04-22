@@ -1,4 +1,6 @@
 # test-qt-vscode
  test developing qt in vscode.
 
-requirements: cmake, ninja, powershell, python, scoop, gcc
+requirements: scoop
+scoop packages: cmake, ninja, pwsh, python, 7z
+

@@ -33,4 +33,5 @@
 
 *.log
 /Qt
-build
+/build
+/_
