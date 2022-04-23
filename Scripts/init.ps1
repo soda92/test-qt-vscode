@@ -1,5 +1,9 @@
 pip install -U pip
+# https://github.com/miurahr/aqtinstall
 pip install aqtinstall
+
+# get versions: aqt list-qt windows desktop
+# get dists of version: aqt list-qt windows desktop --arch [version]
 
 Push-Location $PSScriptRoot/../
 if (Test-Path "Qt") {
