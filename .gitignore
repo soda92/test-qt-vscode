@@ -34,4 +34,4 @@
 *.log
 /Qt
 /build
-/_
+/vcpkg

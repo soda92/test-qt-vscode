@@ -6,6 +6,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 find_package(Qt6 COMPONENTS Widgets REQUIRED)
+find_package(fmt CONFIG REQUIRED)
 
 set(SRCS "main.cpp")
 
@@ -17,6 +18,7 @@ endif(DEBUG)
 
 # target_link_libraries(app PRIVATE Qt6::Widgets)
 target_link_libraries(app PRIVATE Qt6::Core)
+target_link_libraries(app PRIVATE fmt::fmt)
 
 # https://stackoverflow.com/a/40572207/12291425
 
@@ -29,5 +31,5 @@ add_custom_target(
 add_custom_target(
     additional-dll ALL
     DEPENDS app
-    COMMAND pwsh ../Scripts/gcc_dll.ps1
+    COMMAND pwsh ../Scripts/dll.ps1
 )
