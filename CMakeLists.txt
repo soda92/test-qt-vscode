@@ -13,7 +13,8 @@ else()
 add_executable(app WIN32 main.cpp)
 endif(DEBUG)
 
-target_link_libraries(app PRIVATE Qt6::Widgets)
+# target_link_libraries(app PRIVATE Qt6::Widgets)
+target_link_libraries(app PRIVATE Qt6::Core)
 
 # https://stackoverflow.com/a/40572207/12291425
 
