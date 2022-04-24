@@ -8,6 +8,7 @@ set(CMAKE_AUTOUIC ON)
 find_package(Qt6 COMPONENTS Widgets REQUIRED)
 find_package(fmt CONFIG REQUIRED)
 
+# https://cmake.org/pipermail/cmake/2009-June/030311.html
 set(CMAKE_BUILD_TYPE "Debug" CACHE STRING
     "Choose the type of build, options are: Debug Release
 RelWithDebInfo MinSizeRel."
