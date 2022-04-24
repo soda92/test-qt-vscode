@@ -1,1 +1,1 @@
-Remove-Item -Recurse $PSScriptRoot/../build
+Remove-Item -Recurse $PSScriptRoot/../ninja-build

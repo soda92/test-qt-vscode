@@ -1,1 +1,1 @@
-cmake --build $PSScriptRoot/../build
+cmake --build $PSScriptRoot/../ninja-build

@@ -29,6 +29,6 @@
 
 *.log
 /Qt
-/build
+/ninja-build
 /vcpkg
 /dist

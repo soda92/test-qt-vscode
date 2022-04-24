@@ -1,2 +1,2 @@
 requirements: scoop
-scoop packages: cmake, ninja, pwsh, python, git, 7z, gcc, gdb, vscode(C++ ext, python ext, powershell ext)
+scoop packages: cmake, ninja, pwsh, python, git, 7z, gcc, gdb, vscode(C++ ext, python ext, powershell ext), go

@@ -1,4 +1,4 @@
-$target = "$PSScriptRoot/../build"
+$target = "$PSScriptRoot/../ninja-build"
 $dist = "$PSScriptRoot/../dist"
 
 Copy-Item "$target/app.exe" "$dist/main.exe" -Force
