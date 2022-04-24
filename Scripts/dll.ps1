@@ -3,6 +3,6 @@ $dist = "$PSScriptRoot/../dist"
 
 Copy-Item "$target/app.exe" "$dist/main.exe" -Force
 
-Push-Location $PSScriptRoot/../
-& ".\petool\petool.exe"
+Push-Location $PSScriptRoot/../petool
+python copydll.py
 Pop-Location
