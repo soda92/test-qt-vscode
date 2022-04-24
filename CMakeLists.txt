@@ -8,7 +8,7 @@ set(CMAKE_AUTOUIC ON)
 find_package(Qt6 COMPONENTS Widgets REQUIRED)
 find_package(fmt CONFIG REQUIRED)
 
-set(SRCS "main.cpp")
+set(SRCS "src/main.cpp")
 
 if(DEBUG)
 add_executable(app ${SRCS})
@@ -25,7 +25,7 @@ target_link_libraries(app PRIVATE fmt::fmt)
 add_custom_target(
     qt-dll ALL
     DEPENDS app
-    COMMAND ${Qt6_DIR}/../../../bin/windeployqt.exe --translations zh_CN,en $<TARGET_FILE:app>
+    COMMAND ${Qt6_DIR}/../../../bin/windeployqt.exe --translations en --no-libraries $<TARGET_FILE:app>
 )
 
 add_custom_target(
