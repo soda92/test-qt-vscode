@@ -8,13 +8,20 @@ set(CMAKE_AUTOUIC ON)
 find_package(Qt6 COMPONENTS Widgets REQUIRED)
 find_package(fmt CONFIG REQUIRED)
 
+set(CMAKE_BUILD_TYPE "Debug" CACHE STRING
+    "Choose the type of build, options are: Debug Release
+RelWithDebInfo MinSizeRel."
+    FORCE)
+
+set(CONSOLE "true" CACHE STRING "whether use console in windows." FORCE)
+
 set(SRCS "src/main.cpp")
 
-if(DEBUG)
+if(CONSOLE)
 add_executable(app ${SRCS})
 else()
 add_executable(app WIN32 ${SRCS})
-endif(DEBUG)
+endif(CONSOLE)
 
 # target_link_libraries(app PRIVATE Qt6::Widgets)
 target_link_libraries(app PRIVATE Qt6::Core)

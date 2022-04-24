@@ -1,4 +1,5 @@
 from pathlib import Path
+import pathlib
 
 CURRENT = Path(__file__).resolve().parent
 tool = CURRENT.joinpath("petool.exe")
@@ -67,6 +68,27 @@ get_dll_tree(s, CURRENT.parent.joinpath("dist/main.exe"))
 #     )
 # )
 
+
+def get_oppo_dll(name: str) -> str:
+    # get opposite dlls.
+    name_wo_ext = name[0 : name.rfind(".")]
+    name_ext = name[name.rfind(".") :]
+    if name_wo_ext[-1] == "d":
+        return name_wo_ext[:-1] + name_ext
+    else:
+        return name_wo_ext + "d" + name_ext
+
+
 DEST = CURRENT.parent.joinpath("dist")
-for i in s:
-    shutil.copy(i, DEST)
+dest_files = os.listdir(str(DEST))
+for file in s:
+    file_path = pathlib.Path(file).resolve()
+    name = file_path.name
+    # print(name)
+    oppo_dll = get_oppo_dll(name)
+    if DEST.joinpath(oppo_dll).exists():
+        os.remove(str(DEST.joinpath(oppo_dll)))
+    if name in dest_files:
+        continue
+    else:
+        shutil.copy(file, DEST)

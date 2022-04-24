@@ -12,3 +12,7 @@ function clean {
 function build {
     .\Scripts\build.ps1
 }
+
+function run {
+    .\dist\main.exe
+}
