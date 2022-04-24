@@ -16,7 +16,6 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "gdb",
-            "preLaunchTask": "build",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
